@@ -8,15 +8,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<title>Peliculas</title>
 </head>
 <body>
-	<?php
 	
-		foreach ($registros as $row)
-        {
-                echo $row->titulo;
-                echo $row->categoria;
-                
-        }
-	?>
-
+	<div>
+		<?php foreach ($registros as $row){?>
+			<label>Titulo: </label><?= $row->titulo ?></br>
+			<label>Categoria: </label><?= $row->categoria ?></br>
+                                
+        <?php } ?>
+        
+		<label>Año: </label><?= $anio ?></br>
+		<label>Director: </label><?= $director ?></br>
+        <label>Escritor: </label><?= $escritor ?></br>
+        <label>País: </label><?= $pais ?></br>
+		<label>Actores: </label><?= $actores ?></br>
+		<image src="<?= $imagen ?>"></a>
+	</div>
 </body>
 </html>

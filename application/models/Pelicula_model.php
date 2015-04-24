@@ -19,10 +19,12 @@ class Pelicula_model extends CI_Model {
                 $this->categoria  =  $categoria;
                 $this->db->insert('pelicula', $this);
         }
-
-        public function mostrar()
+		/**
+		 * retorna los datos de la pelicula
+		 **/
+        public function mostrar($id)
         {
-                $query = $this->db->query('SELECT * FROM pelicula');
+                $query = $this->db->query('SELECT * FROM pelicula where id=?',array($id));
                 return $query->result();              
                 
         }
